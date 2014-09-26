@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target='_blank'>
+    <title>WebRTC client</title>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='videos'>
+        <video id='localVideo' autoplay muted></video>
+        <video id='remoteVideo' autoplay></video>
+      </div>
+
+      <div id='textareas'>
+    		<textarea id="dataChannelSend" disabled placeholder="Press Start, enter some text, then press Send."></textarea>
+    		<textarea id="dataChannelReceive" disabled></textarea>
+    	</div>
+
+      <button id="sendButton" disabled>Send</button>
+    </div>
+
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='js/lib/adapter.js'></script>
+    <script src='js/main.js'></script>
+  </body>
+</html>

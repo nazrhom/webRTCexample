@@ -1,0 +1,18 @@
+{
+  "name": "webRTCserver",
+  "private": true,
+  "version": "0.0.0",
+  "description": "webRTCserver",
+  "keywords": [],
+  "dependencies": {
+    "node-static": "^0.7.5",
+    "socket.io": "^1.1.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "debug": "node debug server.js"
+  },
+  "main": "server.js",
+  "author": "giovannigarufi",
+  "license": ""
+}

@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src='http://localhost:2014/socket.io/socket.io.js'></script>
+<script src='adapter.js'></script>
+</head>
+<body>
+    <video id="localVideo" height="400" width="300" autoplay muted></video>
+    <video id="remoteVideo" height="360" width="240" autoplay muted></video>
+
+    <textarea id="dataChannelSend"></textarea>
+    <textarea id="dataChannelReceive"></textarea>
+
+    <div>
+        <button id="startButton">Start</button>
+        <button id="callButton">Call</button>
+        <button id="sendButton">Send</button>
+        <button id="hangupButton">Hang Up</button>
+    </div>
+</body>
+<script src="webRTC.js"> </script>
+<script>
+  </script>
+</html>
