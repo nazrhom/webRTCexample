@@ -189,11 +189,17 @@ function send () {
 
 
 function gotIceCandidate (event) {
-  if(event.candidate) {
-    remotePeerConnection.addIceCandidate(new RTCIceCandidate(event.candidate));
-      console.log('Local ICE candidate: \n ' + event.candidate.candidate);
-  }
+  console.log('handleIceCandidate event: ', event);
+  if (event.candidate) {
+    sendMessage({
+      type: 'candidate',
+      label: event.candidate.sdpMLineIndex,
+      id: event.candidate.sdpMid,
+      candidate: event.candidate.candidate});
+  } else {
+    console.log('End of candidates.');
 }
+
 
 function gotRemoteIceCandidate (event) {
   if(event.candidate) {
