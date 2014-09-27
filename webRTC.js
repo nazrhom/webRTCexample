@@ -198,6 +198,7 @@ function gotIceCandidate (event) {
       candidate: event.candidate.candidate});
   } else {
     console.log('End of candidates.');
+  }
 }
 
 
